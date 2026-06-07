@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin routes
+Disallow: /admin
+Disallow: /api/admin/
+
+# Sitemap
+Sitemap: https://techservices.com/sitemap.xml

@@ -1,0 +1,23 @@
+{
+  "name": "TechServices - Web Development Showcase",
+  "short_name": "TechServices",
+  "description": "Showcasing our premium web development projects and services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FEFAE0",
+  "theme_color": "#CCD5AE",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
