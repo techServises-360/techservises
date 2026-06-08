@@ -77,8 +77,8 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl"
               style={{
-                background: '#2d3319',
-                color: '#FEFAE0'
+                background: '#CCD5AE',
+                color: '#2d3319'
               }}
             >
               View Our Work
@@ -91,11 +91,11 @@ export default function Home() {
               href="#contact"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl border-3"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl border-2"
               style={{
-                background: '#CCD5AE',
+                background: '#FAEDCE',
                 color: '#2d3319',
-                borderColor: '#2d3319'
+                borderColor: '#CCD5AE'
               }}
             >
               Start Your Project
