@@ -50,6 +50,17 @@ export async function POST(request: NextRequest) {
       }),
     });
 
+    // Check if response is JSON
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      console.error('Google Apps Script returned non-JSON response (likely HTML)');
+      console.error('This usually means the script URL is incorrect or not deployed properly');
+      return NextResponse.json(
+        { error: 'Email service configuration error. Please contact the administrator.' },
+        { status: 500 }
+      );
+    }
+
     const result = await response.json();
 
     if (!result.ok) {
