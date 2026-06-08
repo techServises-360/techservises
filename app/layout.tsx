@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   publisher: "TechServices",
   icons: {
     icon: [
-      { url: "/logo.png" },
+      { url: "/favicon.ico" },
       { url: "/logo.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      { url: "/logo.png" },
+      { url: "/logo.png", sizes: "180x180" },
     ],
-    shortcut: ["/logo.png"],
+    shortcut: ["/favicon.ico"],
   },
   manifest: "/manifest.json",
   openGraph: {
