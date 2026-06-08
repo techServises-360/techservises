@@ -182,14 +182,24 @@ export default function ProjectShowcase() {
                   {project.title}
                 </h3>
 
-                {/* Project Description */}
-                <p className="mb-6 text-base" 
-                   style={{ color: '#5a6439' }}>
+                {/* Project Description - Limited to 2 lines with ellipsis */}
+                <p 
+                  className="mb-6 text-base"
+                  style={{ 
+                    color: '#5a6439',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    minHeight: '3rem'
+                  }}
+                >
                   {project.description}
                 </p>
 
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                {/* Action Buttons - Fixed mobile layout */}
+                <div className="flex flex-col gap-2.5 w-full">
                   {/* View Live Button - Only show if URL exists */}
                   {project.websiteUrl && (
                     <a
@@ -197,7 +207,7 @@ export default function ProjectShowcase() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105 shadow-lg"
+                      className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105 shadow-lg w-full"
                       style={{ 
                         background: project.color,
                         color: '#2d3319'
@@ -210,9 +220,9 @@ export default function ProjectShowcase() {
                     </a>
                   )}
 
-                  {/* View Details Button */}
+                  {/* View Details Button - Full width */}
                   <button
-                    className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105 shadow-lg flex-1"
+                    className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105 shadow-lg w-full"
                     style={{ 
                       background: '#2d3319',
                       color: '#FEFAE0'
