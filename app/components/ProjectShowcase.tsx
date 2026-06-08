@@ -64,7 +64,7 @@ export default function ProjectShowcase() {
   };
 
   return (
-    <section ref={ref} className="relative px-6 py-16">
+    <section id="projects" ref={ref} className="relative px-6 py-16">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -74,11 +74,11 @@ export default function ProjectShowcase() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4" 
               style={{ color: '#2d3319' }}>
-            Our Projects
+            Our Work
           </h2>
-          <p className="text-lg md:text-xl" 
+          <p className="text-lg md:text-xl max-w-2xl mx-auto" 
              style={{ color: '#5a6439' }}>
-            Discover our portfolio of stunning web solutions
+            Real results. Real clients. Real impact.
           </p>
         </motion.div>
 

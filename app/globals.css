@@ -18,6 +18,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
 body {
   background: #FEFAE0;
   color: var(--text-dark);
@@ -27,4 +33,21 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 3px solid #CCD5AE;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, select, textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Selection styling */
+::selection {
+  background: #CCD5AE;
+  color: #2d3319;
 }

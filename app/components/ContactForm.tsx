@@ -117,11 +117,11 @@ export default function ContactForm() {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4" 
                 style={{ color: '#2d3319' }}>
-              Get In Touch
+              Let's Work Together
             </h2>
-            <p className="text-lg md:text-xl" 
+            <p className="text-lg md:text-xl max-w-2xl mx-auto" 
                style={{ color: '#5a6439' }}>
-              Let's bring your vision to life
+              Turn your vision into reality
             </p>
           </motion.div>
 

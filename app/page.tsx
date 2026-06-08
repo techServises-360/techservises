@@ -58,15 +58,58 @@ export default function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 px-4" 
+            className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 px-4 max-w-3xl mx-auto" 
             style={{ color: '#5a6439' }}
           >
-            Crafting Beautiful Web Experiences
+            Premium Web Solutions That Drive Results
           </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row justify-center gap-4 mb-10 px-4"
+          >
+            <motion.a
+              href="#projects"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl"
+              style={{
+                background: '#2d3319',
+                color: '#FEFAE0'
+              }}
+            >
+              View Our Work
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </motion.a>
+
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl border-3"
+              style={{
+                background: '#CCD5AE',
+                color: '#2d3319',
+                borderColor: '#2d3319'
+              }}
+            >
+              Start Your Project
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </motion.a>
+          </motion.div>
+
+          {/* Decorative lines */}
           <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             className="flex justify-center gap-3 sm:gap-4 flex-wrap"
           >
             <div className="w-16 sm:w-20 h-1 rounded-full" style={{ background: '#CCD5AE' }}></div>
