@@ -183,29 +183,13 @@ export default function ProjectShowcase() {
                 </h3>
 
                 {/* Project Description */}
-                <p className="mb-4 text-base" 
+                <p className="mb-6 text-base" 
                    style={{ color: '#5a6439' }}>
                   {project.description}
                 </p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, i) => (
-                    <span 
-                      key={i}
-                      className="px-3 py-1 rounded-full text-xs font-medium"
-                      style={{ 
-                        background: '#FAEDCE',
-                        color: '#5a6439'
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
                 {/* Action Buttons */}
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                   {/* View Live Button - Only show if URL exists */}
                   {project.websiteUrl && (
                     <a
@@ -213,7 +197,7 @@ export default function ProjectShowcase() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:scale-105 shadow-md"
+                      className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105 shadow-lg"
                       style={{ 
                         background: project.color,
                         color: '#2d3319'
@@ -226,14 +210,19 @@ export default function ProjectShowcase() {
                     </a>
                   )}
 
-                  {/* View Details Link */}
-                  <div className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all"
-                       style={{ color: '#2d3319' }}>
+                  {/* View Details Button */}
+                  <button
+                    className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-105 shadow-lg flex-1"
+                    style={{ 
+                      background: '#2d3319',
+                      color: '#FEFAE0'
+                    }}
+                  >
                     <span>View Details</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </div>
+                  </button>
                 </div>
 
                 {/* Decorative Corner Shape */}
